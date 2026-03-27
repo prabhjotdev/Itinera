@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Default Theme: Pastel ───────────────────────────────────────────────── */
+:root {
+  --color-bg:         #fdf6ff;
+  --color-surface:    #ffffff;
+  --color-surface-2:  #f3e8ff;
+  --color-primary:    #c084fc;
+  --color-primary-fg: #ffffff;
+  --color-secondary:  #f0abfc;
+  --color-accent:     #818cf8;
+  --color-text:       #1e1b4b;
+  --color-text-muted: #6b7280;
+  --color-border:     #e9d5ff;
+  --color-error:      #f87171;
+  --color-success:    #4ade80;
+  --color-warning:    #fbbf24;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+
+  --shadow-card:  0 2px 12px 0 rgb(192 132 252 / 0.12);
+  --shadow-modal: 0 8px 32px 0 rgb(0 0 0 / 0.18);
+}
+
+/* ─── Minimal Theme ───────────────────────────────────────────────────────── */
+[data-theme="minimal"] {
+  --color-bg:         #f9fafb;
+  --color-surface:    #ffffff;
+  --color-surface-2:  #f3f4f6;
+  --color-primary:    #374151;
+  --color-primary-fg: #ffffff;
+  --color-secondary:  #6b7280;
+  --color-accent:     #111827;
+  --color-text:       #111827;
+  --color-text-muted: #9ca3af;
+  --color-border:     #e5e7eb;
+  --shadow-card: 0 1px 4px 0 rgb(0 0 0 / 0.08);
+}
+
+/* ─── Sunset Theme ────────────────────────────────────────────────────────── */
+[data-theme="sunset"] {
+  --color-bg:         #fff7ed;
+  --color-surface:    #ffffff;
+  --color-surface-2:  #ffedd5;
+  --color-primary:    #f97316;
+  --color-primary-fg: #ffffff;
+  --color-secondary:  #fb923c;
+  --color-accent:     #ec4899;
+  --color-text:       #431407;
+  --color-text-muted: #78716c;
+  --color-border:     #fed7aa;
+  --shadow-card: 0 2px 12px 0 rgb(249 115 22 / 0.12);
+}
+
+/* ─── Dark Theme ──────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --color-bg:         #0f0f13;
+  --color-surface:    #1a1a24;
+  --color-surface-2:  #252535;
+  --color-primary:    #a78bfa;
+  --color-primary-fg: #0f0f13;
+  --color-secondary:  #7c3aed;
+  --color-accent:     #38bdf8;
+  --color-text:       #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-border:     #2d2d3f;
+  --shadow-card: 0 2px 12px 0 rgb(0 0 0 / 0.4);
+}
+
+/* ─── Base Styles ─────────────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 2px;
+}
+
+/* ─── Utilities ───────────────────────────────────────────────────────────── */
+.page-scroll {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
